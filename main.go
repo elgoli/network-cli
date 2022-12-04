@@ -26,5 +26,11 @@ func getCliCommands() []cli.Command {
 			Flags:  []cli.Flag{cli.StringFlag{Name: "host"}},
 			Action: command.LookupIPFunc("host"),
 		},
+		{
+			Name:   "mxLookup",
+			Usage:  "Looks up DNS MX records for the given domain name",
+			Flags:  []cli.Flag{cli.StringFlag{Name: "host"}},
+			Action: command.LookupMXFunc("host"),
+		},
 	}
 }

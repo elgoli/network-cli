@@ -20,3 +20,17 @@ func LookupIPFunc(name string) func(ctx *cli.Context) error {
 		return nil
 	}
 }
+
+// LookupMXFunc returns a function to look up DNS MX records for a domain name
+func LookupMXFunc(name string) func(ctx *cli.Context) error {
+	return func(ctx *cli.Context) error {
+		mxs, err := net.LookupMX(ctx.String(name))
+		if err != nil {
+			return err
+		}
+		for mx := range mxs {
+			fmt.Println(mxs[mx].Host)
+		}
+		return nil
+	}
+}
