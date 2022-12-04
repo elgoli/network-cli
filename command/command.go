@@ -34,3 +34,17 @@ func LookupMXFunc(name string) func(ctx *cli.Context) error {
 		return nil
 	}
 }
+
+// LookupNSFunc returns a function to kook up DNS NS records for a domain name
+func LookupNSFunc(name string) func(*cli.Context) error {
+	return func(ctx *cli.Context) error {
+		nss, err := net.LookupNS(ctx.String(name))
+		if err != nil {
+			return err
+		}
+		for ns := range nss {
+			fmt.Println(nss[ns].Host)
+		}
+		return nil
+	}
+}
