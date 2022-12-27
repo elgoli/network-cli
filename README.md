@@ -16,7 +16,7 @@ To find DNS NS records for a given domain name:
 ```
 $ ncli nslookup --host <hostName>
 ```
-## How to access network-cli on Linux distributions
+## How to access ncli on Linux distributions
 To access the commands in system wide and for all users, `ncli` bin file can be created and added to the path as following:
 ```
 $ git clone https://gitlab.com/elgol/network-cli.git
