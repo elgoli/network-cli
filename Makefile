@@ -5,4 +5,4 @@ vendor:
 
 .PHONY: build
 build:
-	GOOS=linux go build -o bin/network-cli -v main.go
+	GOOS=linux go build -o bin/ncli -v main.go
