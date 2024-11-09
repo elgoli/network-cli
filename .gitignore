@@ -3,3 +3,5 @@ bin
 
 # IDE
 .idea
+
+.DS_Store

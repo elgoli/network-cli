@@ -1,9 +1,0 @@
-image: golang:1.19
-
-stages:
-  - build
-
-build-job:
-  stage: build
-  script:
-    - go build ./...
