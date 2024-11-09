@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/urfave/cli"
-	"gitlab.com/elgol/network-cli/command"
+	"github.com/elnazdev/network-cli/command"
 )
 
 func main() {

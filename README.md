@@ -19,7 +19,7 @@ $ ncli nslookup --host <hostName>
 ## How to access ncli on Linux distributions
 To access the commands in system wide and for all users, `ncli` bin file can be created and added to the path as following:
 ```
-$ git clone https://gitlab.com/elgol/network-cli.git
+$ git clone https://github.com/elnazdev/network-cli.git
 $ cd network-cli
 $ make build
 $ cp bin/ncli /usr/local/bin
